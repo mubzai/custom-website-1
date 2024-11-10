@@ -1,95 +1,66 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import Navbar from "@/Components/navbar";
+
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <main>
+      <Navbar />
+      <div className="main-container">
+        {/* Hero Section */}
+        <div className="text-center space-y-4">
+          <h1 className="hero-heading">
+            Hi, I'm a Web Developer
+          </h1>
+          <p className="hero-paragraph">
+            I'm an intermediate web developer with strong expertise in HTML, CSS, and TypeScript.
+            I specialize in building responsive and user-friendly web applications, and I’m always
+            looking for new challenges to enhance my skills.
+          </p>
+          <button className="hero-button">
+            View My Projects
+          </button>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Skills Section */}
+        <section className="skills-section">
+          <h2 className="skills-heading">My Skills</h2>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Skill 1 */}
+            <div className="skill-card">
+              <h3 className="skill-title">HTML & CSS</h3>
+              <p className="skill-description">
+                Expert in building responsive layouts and maintaining accessibility.
+              </p>
+            </div>
+            {/* Skill 2 */}
+            <div className="skill-card">
+              <h3 className="skill-title">TypeScript</h3>
+              <p className="skill-description">
+                Proficient with TypeScript for building scalable and reliable web apps.
+              </p>
+            </div>
+            {/* Skill 3 */}
+            <div className="skill-card">
+              <h3 className="skill-title">JavaScript</h3>
+              <p className="skill-description">
+                Solid understanding of JavaScript for building interactive user interfaces.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action Section */}
+        <section className="cta-section">
+          <h2 className="cta-heading">Let’s Build Something Together</h2>
+          <p className="cta-paragraph">
+            Whether you have a project or just want to connect, feel free to reach out.
+          </p>
+          <button className="cta-button">
+  <a href="/Contact">Contact Me</a>
+</button>
+        </section>
+      </div>
+    </main>
   );
 }
